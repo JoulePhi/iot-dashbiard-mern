@@ -10,10 +10,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost/mqtt-dashboard", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://databasedzulfikar:uae7ZkCORH1VS9Yp@iot-datas.dwqzdwn.mongodb.net/?retryWrites=true&w=majority&appName=iot-datas"
+);
 
 const client = mqtt.connect("mqtt://broker.emqx.io");
 
