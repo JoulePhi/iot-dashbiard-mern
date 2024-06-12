@@ -7,7 +7,12 @@ const Data = require("./models/Data");
 const dataRoutes = require("./routes/data");
 
 const app = express();
-app.use(cors());
+app.use(cors(
+  {
+        origin: ["https://iot-dashboard-chi.vercel.app/"],
+        methods: ["POST", "GET"],
+    }
+));
 app.use(bodyParser.json());
 
 mongoose.connect(
