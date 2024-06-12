@@ -9,7 +9,7 @@ const dataRoutes = require("./routes/data");
 const app = express();
 app.use(
   cors({
-    origin: ["https://iot-dashboard-chi.vercel.app/"],
+    origin: ["https://iot-dashboard-chi.vercel.app"],
     methods: ["POST", "GET"],
   })
 );
