@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "start-watch": "nodemon backend/server.js",
-    "dev": "concurrently \"npm run start-watch\" \"cd frontend && npm start\""
+    "start": "node server.js",
+    "start-watch": "nodemon server.js",
+    "dev": "concurrently \"npm run start-watch\" \"cd ../frontend && npm start\""
   },
   "keywords": [],
   "author": "",

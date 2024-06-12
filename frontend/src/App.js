@@ -14,8 +14,12 @@ function App() {
 
   const fetchData = useCallback(async () => {
     const params = {};
-    if (date) params.date = date;
+    if (date) {
+      params.date = date;
+      console.log(params);
+    }
     const response = await api.get("/data", { params });
+    console.log(response.data);
     if (response.data.length > 0) {
       setKeys(Object.keys(response.data[0].message));
     }

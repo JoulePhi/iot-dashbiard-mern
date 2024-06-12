@@ -5,7 +5,7 @@ const Data = require("../models/Data");
 router.get("/", async (req, res) => {
   const { date } = req.query;
   let filter = {};
-  if (date) {
+  if (date != "") {
     filter.timestamp = {
       $gte: new Date(date),
       $lt: new Date(new Date(date).setDate(new Date(date).getDate() + 1)),
