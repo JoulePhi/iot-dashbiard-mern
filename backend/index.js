@@ -7,18 +7,20 @@ const Data = require("./models/Data");
 const dataRoutes = require("./routes/data");
 
 const app = express();
-app.use(cors(
-  {
-        origin: ["https://iot-dashboard-chi.vercel.app/"],
-        methods: ["POST", "GET"],
-    }
-));
+app.use(
+  cors({
+    origin: ["https://iot-dashboard-chi.vercel.app/"],
+    methods: ["POST", "GET"],
+  })
+);
 app.use(bodyParser.json());
 
 mongoose.connect(
   "mongodb+srv://databasedzulfikar:uae7ZkCORH1VS9Yp@iot-datas.dwqzdwn.mongodb.net/?retryWrites=true&w=majority&appName=iot-datas"
 );
-
+app.get("/", (req, res) => {
+  res.json("Hello");
+});
 const client = mqtt.connect("mqtt://broker.emqx.io");
 
 client.on("connect", () => {
