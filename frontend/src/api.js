@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://iot-dashboard-backend-zeta.vercel.app/api",
+  baseURL: "http://147.139.201.149:5000/api",
 });
 
 export default api;
