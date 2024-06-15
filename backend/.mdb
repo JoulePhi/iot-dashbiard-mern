@@ -1,0 +1,10 @@
+{
+  "projectName": "iot-dashboard",
+  "meta": {
+    "type": "backend"
+  },
+  "backend": {
+    "platform": "node12"
+  },
+  "hash": "ca4cb010"
+}

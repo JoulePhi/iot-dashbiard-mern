@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://147.139.201.149:5000/api",
+  baseURL: "https://iot-dashbiard-mern-production.up.railway.app/api",
 });
 
 export default api;
